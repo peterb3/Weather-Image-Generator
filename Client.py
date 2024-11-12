@@ -2,18 +2,8 @@
 
 import zmq
 
-context = zmq.Context()
-
-print("Client attempting to connect to server...")
-
-socket = context.socket(zmq.REQ)
-
-socket.connect("tcp://localhost:5555")
-
-while True:
-    temperature = "75"
-
-    socket.send_string(temperature)
+def send_temp(temp: str) -> str:
+    socket.send_string(temp)
 
     response = socket.recv()
 
@@ -24,3 +14,23 @@ while True:
 
     else:
         print("Server sent back image link")
+        return image_link
+
+def end_server() -> None:
+    socket.send_string("Q")
+
+if __name__ == "__main__":
+    context = zmq.Context()
+
+    print("Client attempting to connect to server...")
+
+    socket = context.socket(zmq.REQ)
+
+    socket.connect("tcp://localhost:5555")
+
+    tests = ["20", "50", "85"]
+
+    for test in tests:
+        print(send_temp(test))
+
+    end_server()

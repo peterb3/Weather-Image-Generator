@@ -12,6 +12,10 @@ while True:
 
     print(f"Received request from the client: {message.decode()}")
 
+    if temperature == "Q":
+        print("Shutting down...")
+        break
+
     try:
         temperature = int(temperature)
 
@@ -32,3 +36,5 @@ while True:
         reply = "Error"
 
         socket.send_string(reply)
+
+context.destroy()
