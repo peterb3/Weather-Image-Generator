@@ -23,10 +23,10 @@ while True:
             reply = "https://static.vecteezy.com/system/resources/previews/016/595/897/original/cold-weather-thermometer-isolated-3d-render-of-winter-icon-png.png"
 
         elif temperature < 70:
-            reply = "https://www.clipartmax.com/png/middle/0-8774_medium-image-weather-symbols.png"
+            reply = "https://images.squarespace-cdn.com/content/v1/5acfcc510dbda33931a4a9f9/1525124939291-I3J8K26EKXPD3NU0HZ1K/Program_need_icon_warm.png"
 
         else:
-            reply = "https://th.bing.com/th/id/R.dfec3f5ff84642815d6f9c8dd809f189?rik=MIypIBjoUFKYZw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fMiL%2fMAr%2fMiLMArXpT.png&ehk=1KhyzZh0wXHGQjpqSUJFIztwFqMuGYjpXvJj4pLzRIc%3d&risl=&pid=ImgRaw&r=0"
+            reply = "https://static.vecteezy.com/system/resources/previews/008/370/898/original/temperature-weather-thermometers-with-celsius-and-fahrenheit-scales-realistic-3d-weather-thermometer-icon-density-on-white-background-sun-warm-thermostat-meteorology-isolated-icon-free-vector.jpg"
 
         socket.send_string(reply)
 
